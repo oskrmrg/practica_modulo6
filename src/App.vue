@@ -1,9 +1,26 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  
+  <nav class="container-fluid">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-3">
+          <router-link to="/" class="estiloHome"> <img src="./assets/logo.png" class="iconoGame webName">Game's Opinion</router-link>
+        </div>
+        <div class="col-md-6">
+          <!-- DIV VACIO -->
+        </div>
+        <div class="col-md-3">
+          <router-link to="/about" class="estiloAbout">About</router-link>
+        </div>
+      </div>
+    </div>    
   </nav>
   <router-view/>
+  
+  <footer class="miFooter">
+      
+    <p>Copyright 2023 &#0169 / Dev Trainning, Oscar Rodríguez</p>
+  </footer>
 </template>
 
 <style>
@@ -15,16 +32,32 @@
   color: #2c3e50;
 }
 
+
+
 nav {
   padding: 30px;
+ 
+  background-image: url('./assets/fondonav.png');
+  background-size: cover;
 }
 
 nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: whitesmoke;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+.iconoGame{
+  width: 64px;
+  height: 64px;
+  margin-right: 15px;
+}
+
+.miFooter{
+  height: 50px;
+  background-image: linear-gradient(180deg, #505467 0, #1f3259 50%, #00154b 100%);
+  color: whitesmoke;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding-top: 15px;
+
 }
 </style>
